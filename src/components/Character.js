@@ -6,7 +6,8 @@ import styled from "styled-components";
 // Component Styling
 const StyleCharacter = styled.div`
   width: 20%;
-  opacity: 40%;
+  opacity: 60%;
+  margin: 2%;
   background-color: whitesmoke;
   border-radius: 20px;
   padding: 2%;
