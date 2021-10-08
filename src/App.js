@@ -46,6 +46,8 @@ const App = () => {
                 name={character.name}
                 birthYear={character["birth_year"]}
                 gender={character.gender}
+                height={character.height}
+                mass={character.mass}
               />
             );
           })

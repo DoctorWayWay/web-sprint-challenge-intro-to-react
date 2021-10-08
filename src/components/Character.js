@@ -23,12 +23,14 @@ const StyleCharacter = styled.div`
 
 // Component
 const Character = (props) => {
-  const { name, birthYear, gender } = props;
+  const { name, birthYear, gender, height, mass } = props;
   return (
     <StyleCharacter>
       <h3>{name}</h3>
       <p>Born: {birthYear}</p>
       <p>Gender: {gender}</p>
+      <p>Height: {height}cm</p>
+      <p>Weight: {mass}kg</p>
     </StyleCharacter>
   );
 };
