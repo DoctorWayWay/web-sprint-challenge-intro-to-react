@@ -19,7 +19,7 @@ const App = () => {
       .get("https://swapi.dev/api/people")
       .then((response) => {
         console.log(response);
-        setCharacters(response.data.results);
+        setCharacters(response.data);
       })
       .catch((error) => {
         console.log(error);
@@ -29,7 +29,19 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">Characters</h1>
-      <Character />
+      {characters ? (
+        characters.map((character) => {
+          return (
+            <Character
+              name={character.name}
+              birthYear={character["birth_year"]}
+              gender={character.gender}
+            />
+          );
+        })
+      ) : (
+        <h2>Cannot Load...</h2>
+      )}
     </div>
   );
 };
